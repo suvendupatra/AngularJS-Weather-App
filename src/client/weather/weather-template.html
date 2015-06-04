@@ -1,0 +1,18 @@
+<div class="container">
+    <form name="locationForm" ng-submit="search()">
+      <div class="form-group">
+        <label for "locationInput">Location :</label>
+        <input name="locationInput" class="form-control" type="text" ng-model="location" placeholder="Plano, TX" ng-minlength="5" ng-maxlength="20" required/>
+      </div>
+      <button type="submit"  class="btn btn-default">Search!</button>
+
+        <div ng-messages="locationForm.locationInput.$error" style="color:red" role="alert">
+            <div ng-message="required">Please Enter a City Name!</div>
+            <div ng-message="minlength">City Name is Too Short!</div>
+            <div ng-message="maxlength">Please enter valid city name. Example: Plano, TX</div>
+        </div>
+    </form>
+    <div ng-repeat="location in searches">
+        <weather-location current="location"></weather-location>
+    </div>
+</div>

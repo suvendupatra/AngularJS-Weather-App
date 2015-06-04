@@ -1,0 +1,23 @@
+{
+  "port": 8878,
+  "stassets": {
+    "verbose": true,
+    "root": "./src/client",
+    "vendors": {
+      "prefix": [],
+      "js": [],
+      "css": []
+    }
+  },
+  "tls": false,
+  "server": {
+    "root": "./src/server",
+    "routing": [
+      "allow",
+      "**/*route"
+    ],
+    "extensions": [
+      "js", "coffee"
+    ]
+  }
+}

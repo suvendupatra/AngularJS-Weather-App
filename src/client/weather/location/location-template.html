@@ -1,0 +1,20 @@
+
+<div id="weatherBox" class="row" ng-click="fullForecast = !fullForecast">
+    <div class="col-sm-2">
+        <b>Location: </b>{{ location.name }}
+    </div>
+    <div class="col-sm-2">
+        <b>Weather: </b>{{ location.weather[0].main}}
+    </div>
+    <div class="col-sm-2">
+        <b>Temperature: </b>{{ location.main.temp | temperature }}
+    </div>
+    <div id="forecastBox" class="" ng-show="fullForecast">
+        <div class="col-sm-2" ng-repeat="day in forecast.list.slice(0,6)">
+            <b>{{day.date | date: 'EEEE'}}</b> <br/>
+            High: {{ day.temp.max | temperature }} <br/>
+            Low: {{ day.temp.min | temperature}}
+        </div>
+        <!--pre>{{ forecast | json}}</pre-->
+    </div>
+</div>

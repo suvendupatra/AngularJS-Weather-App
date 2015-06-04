@@ -1,0 +1,24 @@
+#weatherMain{
+
+}
+#weatherBox{
+    background: #00d6b2;
+    border-radius: 10px;
+    width: 420px;
+    margin: 5px 0px 5px 2px;
+}
+#forecastBox{
+    background: #cccccc;
+    border-radius: 10px;
+    width: 410px;
+    margin: 5px 0px 5px 2px;
+    font-size:8px;
+}
+.col-sm-2{
+    float:left;
+}
+weather-location .row{
+    padding: 2px;
+    border: 1px black solid;
+    border-radius: 2px;
+}
